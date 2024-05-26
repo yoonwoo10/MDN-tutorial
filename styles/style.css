@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Hana_handwriting';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_05@1.0/Hana_handwriting.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size : 15px;
+    font-family : "Hana_handwriting";
+}
+
+h1{
+    font-size : 50px;
+    color : orange;
+    text-align: center;
+}
+
+p, li{
+    font-size : 30px;
+}
