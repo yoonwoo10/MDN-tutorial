@@ -12,16 +12,22 @@ myImage.onclick = () => {
 let myButton = document.querySelector("button");
 let myHeading = document.querySelector("h1");
 
-function setUserName() {
-  const myName = prompt("Please enter your name.");
-  localStorage.setItem("name", myName);
-  myHeading.textContent = `Mozilla is cool, ${myName}`;
+function setUsername(){
+    const myName = prompt("Please enter your name");
+    if (!myName){
+        setUsername();
+    }else{
+        localStorage.setItem("name", myName);
+        myHeading.textContent = `Mozilla is cool, ${myName}`;}
 }
 
-if (!localStorage.getItem("name")) {
-  setUserName();
-} else {
-  const storedName = localStorage.getItem("name");
-  myHeading.textContent = `Mozilla is cool, ${storedName}`;
+if (!localStorage.getItem("name")){
+    setUsername();
+}else{
+    const storedName = localStorage.getItem("name");
+    myHeading.textContent = `Mozilla is cool, ${storedName}`;
 }
-N
+
+myButton.onclick = ()=>{
+    setUsername();
+}
